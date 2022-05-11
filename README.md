@@ -16,3 +16,36 @@ Update Capabilities
 In some cases, registration acceptance is not successful and if it is detected, then the device goes back to de-registered. 
 Finally, when the registration is successful then it means the core network knows what is the identity of the device that's trying to communicate with the network, what are the capabilities of that device and what services it wants to access.
 And it also establishes the encryption parameters that both the device and the core network use to communicate with each and that makes the registration successful.
+
+Connection Management
+	  Connection management is all about establishing N1 connectivity, which is the interface between the device and AMF. It has two components:- first, the device connects to RAN using RRC signalling and second, the N2 is used to establish between AMF and gNB.
+When both the above components are up and running, it means the device can now access the AMF using the N1 signal.
+There are terms called NAS(Non-Access Stratum) and AS(Access Stratum). NAS refers to the connectivity between the device and the AMF.
+So in connection management, one aim is to establish a NAS-signalling device and AMF. AS refers to the connectivity of wireless access, which is the connectivity between the device and gNB.
+When the device is in a CM-Idle state, it means that there is no signalling that is possible between the device and the AMF. It means NAS signalling is not yet established. So in the CM-Idle state, they do not support mobility. Mobility means the reselection of the cell again and again until the device finds the better cell to connect.  And if NAS signalling is successful it goes under CM-Connected. It means the device has a signalling connection established with AMF which means it can communicate with the core network and start availing of 5G services.
+
+AMF Services
+Every network function produces some services and consumes some services. We will discuss the services which were consumed by other functions.
+Namf_Communication
+Provides the service operation for transporting N1 messages to UE.
+Provides the service operation for initiating N2 messages towards the access network.
+Allows network functions to subscribe and unsubscribe for notification of specific N1 messages from UE.
+Allows network functions to subscribe and unsubscribe for notification of specific information from the access network.
+Security Context management
+UE information management and transfer (including its security context)
+Namf_MT
+Paging UE if UE is in Idle state and responds to other network functions after the UE enters CM-Connected State.
+Respond to requester network function if UE is in connected mode.
+Providing the terminating domain selection information for IMS voice to the consumer network functions.
+Namf_Location
+Allows network functions can request the current geodetic and optionally civic location of a target UE.
+Allows network functions to be notified of event information related to emergency sessions.
+Allows network functions to request network provider location information(NPLI) and/or local time zone corresponding to the location of the target UE.
+Namf_EventExposure
+Location changes
+Time Zone changes
+Access Type changes
+Registration State changes
+Connectivity State changes
+UE loss of Communication
+UE Reachability Status
