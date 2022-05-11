@@ -41,12 +41,12 @@ Paging UE if UE is in Idle state and responds to other network functions after t
 Respond to requester network function if UE is in connected mode.<br />
 Providing the terminating domain selection information for IMS voice to the consumer network functions.<br />
 
-c) **Namf_Location**
+c) **Namf_Location**<br />
 Allows network functions can request the current geodetic and optionally civic location of a target UE.<br />
 Allows network functions to be notified of event information related to emergency sessions.<br />
 Allows network functions to request network provider location information(NPLI) and/or local time zone corresponding to the location of the target UE.<br />
 
-d) **Namf_EventExposure**
+d) **Namf_EventExposure**<br />
 Location changes<br />
 Time Zone changes<br />
 Access Type changes<br />
