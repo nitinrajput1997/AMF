@@ -1,7 +1,7 @@
 # AMF
 
 It is a control plane function in a 5G core network. AMF's main function is as follows<br />
-**1. Registration Management** 
+**1. Registration Management**<br />
 	   When the device is turned on, the device has to try to connect to the network, and then due-process it has to verify and validate that it is connecting to a genuine network that is intended to connect. Similarly, the network has to validate the device has the right privilege and credentials to connect to the network and access 5G services. This is handled by registration management.
 It refers to the collection of different principles that supports the device registration or deregistration with the network and when the registration is successful, registration management establishes the user context.
 User Context is the combination where the core network understands the identity of devices, and the identity of subscriptions and establishes the necessary encryption parameters for further communication between devices and the core network.
@@ -27,6 +27,7 @@ When the device is in a CM-Idle state, it means that there is no signalling that
 
 **AMF Services**
 Every network function produces some services and consumes some services. We will discuss the services which were consumed by other functions.<br />
+
 a) **Namf_Communication**<br />
 Provides the service operation for transporting N1 messages to UE.<br />
 Provides the service operation for initiating N2 messages towards the access network.<br />
@@ -34,14 +35,17 @@ Allows network functions to subscribe and unsubscribe for notification of specif
 Allows network functions to subscribe and unsubscribe for notification of specific information from the access network.<br />
 Security Context management<br />
 UE information management and transfer (including its security context)<br />
+
 b) **Namf_MT**<br />
 Paging UE if UE is in Idle state and responds to other network functions after the UE enters CM-Connected State.<br />
 Respond to requester network function if UE is in connected mode.<br />
 Providing the terminating domain selection information for IMS voice to the consumer network functions.<br />
+
 c) **Namf_Location**
 Allows network functions can request the current geodetic and optionally civic location of a target UE.<br />
 Allows network functions to be notified of event information related to emergency sessions.<br />
 Allows network functions to request network provider location information(NPLI) and/or local time zone corresponding to the location of the target UE.<br />
+
 d) **Namf_EventExposure**
 Location changes<br />
 Time Zone changes<br />
